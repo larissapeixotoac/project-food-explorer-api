@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: theme(fontFamily[ff-primary]), sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+
+  outline: none;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: theme(colors[DARK_400]);
+  color: theme(colors[LIGHT_100]);
+}
+
+body, input, button, textarea {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: theme(colors[LIGHT_100]);
+  transition: 100s;
+}
+
+a:active {
+  transition: 100s;
+}
+
+/*Conferir depois*/
+button:hover, a:hover {
+  filter: brightness(0.9);
+}
+
+input:-webkit-autofill {       
+  transition: all 0s 50000s;     
+}
+
+#rightGradient {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000A0F 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000A0F 100%);
+}
+
+#leftGradient {
+  -webkit-mask-image: linear-gradient(90deg, #000A0F, transparent);
+  mask-image: linear-gradient(90deg, #000A0F, transparent);
+  
+}
+
+.Carousel .react-multi-carousel-track{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:row;
+  gap: 1rem;
+  position:relative;
+  overflow-x: hidden;
+  /* transform-style:preserve-3d; */
+  backface-visibility:hidden;
+  will-change:transform,transition
+  
+}
+
+.Carousel .react-multiple-carousel__arrow {
+  z-index: 30;
+}
+
+.Carousel .react-multiple-carousel__arrow::before{
+  font-size:20px;
+  color:#fff;
+  display:block;
+  font-family:revicons;
+  text-align:center;
+  z-index:2;
+  position:relative
+}
+
+.Carousel .react-multiple-carousel__arrow--right, .Carousel .react-multiple-carousel__arrow, .Carousel .react-multiple-carousel__arrow--left, .Carousel .react-multiple-carousel__arrow:hover {
+  background-color: transparent;
+}
+
+.Carousel .react-multi-carousel-item{
+  /* transform-style:preserve-3d; */
+  backface-visibility:visible
+}
+
+/* For Webkit-based browsers (Chrome, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* Optional: Adjust the margin as needed */
+  display: none;
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 0.5em; /* Adjust the width as desired */
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Adjust the background color as desired */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; /* Adjust the thumb color as desired */
+    border-radius: 4px; /* Adjust the border radius as desired */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Adjust the thumb color on hover as desired */
+  }
+}
