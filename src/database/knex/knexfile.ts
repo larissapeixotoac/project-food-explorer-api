@@ -5,7 +5,7 @@ export const development: Knex.Config = {
     client: 'sqlite3',
     useNullAsDefault: true,
     connection: {
-        filename: path.resolve(__dirname, '..', 'food-explorer.sqlite'), //for the build to work
+        filename: path.resolve(__dirname, '..', 'food-explorer.sqlite'), //on render, using build the tmp go to the root
         //filename: path.resolve(__dirname, '..', '..', '..', 'food-explorer.sqlite')
     },
     migrations: {
