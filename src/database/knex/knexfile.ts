@@ -5,8 +5,8 @@ export const development: Knex.Config = {
     client: 'sqlite3',
     useNullAsDefault: true,
     connection: {
-        filename: path.resolve(__dirname, '..', 'food-explorer.sqlite'), //on render, using build the tmp go to the root
-        //filename: path.resolve(__dirname, '..', '..', '..', 'food-explorer.sqlite')
+        filename: path.resolve(__dirname, '..', 'food-explorer.sqlite'), //on render, using build the database go to the root
+        //filename: path.resolve(__dirname, '..', '..', '..', 'food-explorer.sqlite') /using npm rum dev works as should be
     },
     migrations: {
         directory: path.resolve(__dirname, 'migrations')
