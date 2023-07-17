@@ -17,3 +17,36 @@ O administrador possui a capacidade de adicionar novos pratos, editar os já exi
 - Express (lib)
 - Zod (lib)
 - Knex (lib)
+
+## Execução
+
+Clone the project
+
+```bash
+  git git@github.com:larissapeixotoac/project-food-explorer-api.git
+```
+
+Go to the project directory
+
+```bash
+  cd food-explorer-api
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Gerar banco de dados e aplicar as migrations
+
+```bash
+  npm run migrate
+```
+
+Start the server
+
+```bash
+  npm run dev  
+```
+The server will initialize in http://localhost:3333 
