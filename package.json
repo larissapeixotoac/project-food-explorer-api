@@ -17,7 +17,8 @@
     "staging": "NODE_ENV=staging node dist/server.js",
     "tsx-start": "tsx watch src/server.ts",
     
-    "dev": "tsx watch dist/server.js",
+    "dev-pro": "tsx watch dist/server.js",
+    "dev": "tsx watch src/server.ts"
     
     "build": "tsup src",
     "knex:rollback-all": "knex migrate:rollback --al",
