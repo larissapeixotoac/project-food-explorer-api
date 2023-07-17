@@ -77,9 +77,14 @@ class OrderItemsController {
         const user_id = request.admin.id
 
         const openOrder = await knex('orders').where({ user_id }).where({ status: 'open'}).first()
-        const checkDishOnOrder = await knex('order-items').where({ order_id: openOrder.id })
         
-        return response.status(StatusCodes.OK).json(checkDishOnOrder)
+        if(openOrder) {
+            const checkDishOnOrder = await knex('order-items').where({ order_id: openOrder.id })
+
+            return response.status(StatusCodes.OK).json(checkDishOnOrder)
+        }
+
+        return response.status(StatusCodes.BAD_REQUEST).json()
     }  
 }
 
