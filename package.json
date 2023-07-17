@@ -17,7 +17,7 @@
     "staging": "NODE_ENV=staging node dist/server.js",
     "tsx-start": "tsx watch src/server.ts",
     
-    "dev-pro": "tsx watch dist/server.js",
+    "start-dev": "tsx watch dist/server.js",
     "dev": "tsx watch src/server.ts"
     
     "build": "tsup src",
