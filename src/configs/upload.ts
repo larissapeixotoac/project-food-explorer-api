@@ -2,8 +2,8 @@ const path = require('path')
 import multer from 'multer'
 import crypto from 'crypto'
 
-const TMP_FOLDER = path.resolve(__dirname, "..", "tmp") //for the build to work
-//const TMP_FOLDER = path.resolve(__dirname, "..", "..", "tmp")
+const TMP_FOLDER = path.resolve(__dirname, "..", "tmp") //on render, using build the tmp go to the root
+//const TMP_FOLDER = path.resolve(__dirname, "..", "..", "tmp") //using npm rum dev works as should be
 const UPLOADS_FOLDER = path.resolve(TMP_FOLDER, "uploads")
 
 const MULTER = {
