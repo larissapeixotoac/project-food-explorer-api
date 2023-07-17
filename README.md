@@ -38,7 +38,7 @@ Install dependencies
   npm install
 ```
 
-Gerar banco de dados e aplicar as migrations
+Generate a database and apply the migrations
 
 ```bash
   npm run migrate
